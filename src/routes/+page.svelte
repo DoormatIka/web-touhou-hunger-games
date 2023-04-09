@@ -23,3 +23,5 @@
   I am under the age of 13 and have parental guidance. I have read and
   understand these terms.
 </a>
+
+<p class="mt-5">Using edge functions.</p>
