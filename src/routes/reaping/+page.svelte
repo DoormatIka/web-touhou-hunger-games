@@ -18,7 +18,7 @@
 
 <div class="h-screen">
   <h2 class="m-5">The Reaping</h2>
-  <div class="grid grid-cols-3 lg:grid-cols-5 grid-flow-dense gap-4">
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 grid-flow-dense gap-4">
     {#each players as { name, picture }}
       <div class="border px-3 break-all">
         <img src={picture} alt={name} class=" max-h-32"/>
