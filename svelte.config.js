@@ -13,7 +13,7 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter({
       edge: true,
-      split: true
+      split: false
     }),
     csp: {
       mode: "auto",
