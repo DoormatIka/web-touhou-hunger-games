@@ -1,6 +1,11 @@
 <script lang="ts">
 </script>
 
+<svelte:head>
+  <title>Touhou Hunger Games</title>
+  <meta content="Touhou Hunger Games (Incomplete)" property="og:title" />
+  <meta content="A simulator to make players fight to the death in the land of Gensokyo." property="og:description" />
+</svelte:head>
 
 <h1 class="my-10">Disclaimer</h1>
 <p class="sm:w-5/6 text-justify">
@@ -24,4 +29,4 @@
   understand these terms.
 </a>
 
-<p class="mt-5">Using edge functions.</p>
+<p class="mt-5">Using edge functions. Severely incomplete.</p>
