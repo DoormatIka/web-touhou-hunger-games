@@ -6,7 +6,7 @@
   <div
     class="relative menu-bg min-h-fit w-full sm:h-full sm:w-1/4 min-w-min sm:max-w-xs border"
   >
-    <div class="text-center py-7 px-3">
+    <div class="text-center py-7 px-4">
       <h3>Touhou Hunger Games</h3>
       <div class="flex sm:flex-col flex-row gap-5 sm:gap-2 sm:mt-14 mt-10 mx-3 text-white justify-center">
         <a href="/" class="sm:mb-5">Disclaimer</a>
