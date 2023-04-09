@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Lovers+Quarrel&family=Rubik&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply bg-[#533636] text-white/80;
+  box-sizing: border-box;
+}
+
+h1 {
+  @apply text-8xl font-lovers tracking-wider;
+}
+h2 {
+  @apply text-7xl font-lovers tracking-wider;
+}
+h3 {
+  @apply text-6xl font-lovers tracking-wide;
+}
+
+p {
+  @apply font-rubik;
+}
+
+a {
+  @apply text-cyan-400 hover:underline font-rubik;
+}
+
+.menu-bg {
+  background: linear-gradient(
+    0deg, 
+    rgba(0, 0, 0, 0.5), 
+    rgba(0, 0, 0, 0.5)), 
+    url("bg.jpg") #533636;
+  mix-blend-mode: luminosity;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 10% 75%;
+}

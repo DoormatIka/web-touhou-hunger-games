@@ -1,0 +1,228 @@
+{
+  "objects": [
+    "Hieda Fields | 1",
+    "Dragon Statue | Statue",
+    "Dragon Road",
+    "Village Road",
+    "Hieda Entrance",
+    "Hieda House | Living Room",
+    "Hieda House | Kitchen",
+    "Hieda House | Hallway",
+    "Hieda House | Bathroom",
+    "Hieda House | Guest Room 1",
+    "Hieda House | Master Room",
+    "Hieda House | Alice's Room",
+    "Small Shrine | Shrine",
+    "Road to Small's Shrine",
+    "Small Shrine | Donation Box",
+    "Houses Road",
+    "Houses | Passage",
+    "Houses | Admin's",
+    "Houses | Kappa's",
+    "Houses | Smol's",
+    "Houses | Arctic's",
+    "Houses | Terminal's",
+    "Village Fields | 1",
+    "Village Fields | 2",
+    "Village Fields | 3",
+    "Grassy Trail",
+    "Kappa | Forest Trail",
+    "Kappa | Warehouse",
+    "Geidontei | Tables",
+    "Geidontei | Bathroom",
+    "Geidontei | Bar",
+    "Geidontei Entrance",
+    "Suzunaan Door",
+    "Suzunaan | Reception",
+    "Suzunaan | Generalities Section",
+    "Suzunaan | Religion Section",
+    "Suzunaan | History Section",
+    "Suzunaan | Literature Section"
+  ],
+  "routes": [
+    [
+      "Hieda Fields | 1",
+      "Dragon Road"
+    ],
+    [
+      "Hieda Fields | 1",
+      "Hieda Entrance"
+    ],
+    [
+      "Hieda Fields | 1",
+      "Grassy Trail"
+    ],
+    [
+      "Dragon Statue | Statue",
+      "Dragon Road"
+    ],
+    [
+      "Dragon Statue | Statue",
+      "Road to Small's Shrine"
+    ],
+    [
+      "Dragon Statue | Statue",
+      "Village Road"
+    ],
+    [
+      "Hieda House | Living Room",
+      "Hieda Entrance"
+    ],
+    [
+      "Hieda House | Living Room",
+      "Hieda House | Kitchen"
+    ],
+    [
+      "Hieda House | Hallway",
+      "Hieda House | Living Room"
+    ],
+    [
+      "Hieda House | Hallway",
+      "Hieda House | Bathroom"
+    ],
+    [
+      "Hieda House | Hallway",
+      "Hieda House | Guest Room 1"
+    ],
+    [
+      "Hieda House | Hallway",
+      "Hieda House | Master Room"
+    ],
+    [
+      "Hieda House | Hallway",
+      "Hieda House | Alice's Room"
+    ],
+    [
+      "Small Shrine | Shrine",
+      "Road to Small's Shrine"
+    ],
+    [
+      "Small Shrine | Shrine",
+      "Small Shrine | Donation Box"
+    ],
+    [
+      "Houses | Passage",
+      "Houses Road"
+    ],
+    [
+      "Houses | Passage",
+      "Houses | Admin's"
+    ],
+    [
+      "Houses | Passage",
+      "Houses | Kappa's"
+    ],
+    [
+      "Houses | Passage",
+      "Houses | Smol's"
+    ],
+    [
+      "Houses | Passage",
+      "Houses | Arctic's"
+    ],
+    [
+      "Houses | Passage",
+      "Houses | Terminal's"
+    ],
+    [
+      "Houses | Passage",
+      "Geidontei Entrance"
+    ],
+    [
+      "Houses | Passage",
+      "Suzunaan Door"
+    ],
+    [
+      "Village Fields | 1",
+      "Village Road"
+    ],
+    [
+      "Village Fields | 1",
+      "Village Fields | 2"
+    ],
+    [
+      "Village Fields | 2",
+      "Village Fields | 3"
+    ],
+    [
+      "Village Fields | 1",
+      "Village Fields | 3"
+    ],
+    [
+      "Village Fields | 3",
+      "Houses Road"
+    ],
+    [
+      "Village Fields | 2",
+      "Houses Road"
+    ],
+    [
+      "Grassy Trail",
+      "Kappa | Forest Trail"
+    ],
+    [
+      "Kappa | Forest Trail",
+      "Kappa | Warehouse"
+    ],
+    [
+      "Geidontei | Tables",
+      "Geidontei | Bathroom"
+    ],
+    [
+      "Geidontei | Tables",
+      "Geidontei | Bar"
+    ],
+    [
+      "Geidontei | Bathroom",
+      "Geidontei | Bar"
+    ],
+    [
+      "Geidontei Entrance",
+      "Geidontei | Tables"
+    ],
+    [
+      "Suzunaan Door",
+      "Suzunaan | Reception"
+    ],
+    [
+      "Suzunaan | Reception",
+      "Suzunaan | Generalities Section"
+    ],
+    [
+      "Suzunaan | Generalities Section",
+      "Suzunaan | Religion Section"
+    ],
+    [
+      "Suzunaan | Generalities Section",
+      "Suzunaan | History Section"
+    ],
+    [
+      "Suzunaan | Generalities Section",
+      "Suzunaan | Literature Section"
+    ],
+    [
+      "Suzunaan | Literature Section",
+      "Suzunaan | History Section"
+    ],
+    [
+      "Suzunaan | Literature Section",
+      "Suzunaan | Religion Section"
+    ],
+    [
+      "Suzunaan | History Section",
+      "Suzunaan | Religion Section"
+    ],
+    [
+      "Suzunaan | Religion Section",
+      "Suzunaan | Reception"
+    ],
+    [
+      "Suzunaan | Literature Section",
+      "Suzunaan | Reception"
+    ],
+    [
+      "Suzunaan | History Section",
+      "Suzunaan | Reception"
+    ]
+  ]
+}
