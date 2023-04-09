@@ -32,7 +32,7 @@ a {
     0deg, 
     rgba(0, 0, 0, 0.5), 
     rgba(0, 0, 0, 0.5)), 
-    url("bg.jpg") #533636;
+    url("/bg.jpg") #533636;
   mix-blend-mode: luminosity;
   background-repeat: no-repeat;
   background-size: cover;
