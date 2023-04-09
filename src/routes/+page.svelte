@@ -1,12 +1,6 @@
 <script lang="ts">
 </script>
 
-<svelte:head>
-  <title>Touhou Hunger Games</title>
-  <meta content="Touhou Hunger Games (Incomplete)" property="og:title" />
-  <meta content="A simulator to make players fight to the death in the land of Gensokyo." property="og:description" />
-</svelte:head>
-
 <h1 class="my-10">Disclaimer</h1>
 <p class="sm:w-5/6 text-justify">
   Due to the nature of this Hunger Games simulator, we require all users to be

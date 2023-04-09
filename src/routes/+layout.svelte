@@ -2,6 +2,12 @@
   import "../app.css";
 </script>
 
+<svelte:head>
+  <title>Touhou Hunger Games</title>
+  <meta content="Touhou Hunger Games (Incomplete)" property="og:title" />
+  <meta content="A simulator to make players fight to the death in the land of Gensokyo." property="og:description" />
+</svelte:head>
+
 <div class="h-screen flex-grow w-screen flex sm:flex-row flex-col overflow-hidden">
   <div
     class="relative menu-bg min-h-fit w-full sm:h-full sm:w-1/4 min-w-min sm:max-w-xs border"
