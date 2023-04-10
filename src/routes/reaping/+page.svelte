@@ -30,9 +30,9 @@
   <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 grid-flow-dense gap-4">
       {#each $players as { name, picture }, index (name)}
           <div 
-            in:fly|local={{ x: 100, duration: 500 }} 
-            out:fly|local={{ x:-100, duration: 500 }} 
-            animate:flip|local={{ duration:300 }} 
+            in:fly|local={{ x: 100, y:100, duration: 500 }} 
+            out:fly|local={{ x:-100, y:-100, duration: 500 }} 
+            animate:flip|local={{ duration:600 }} 
             class="border px-3 break-all relative m-auto"
           >
             <img src={picture} alt={name} class=" max-h-32 object-contain"/>
