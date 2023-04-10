@@ -10,8 +10,7 @@
   <span class="text-yellow-200">Touhou Project</span>
   franchise made by ZUN.
   <span class="text-yellow-200">Alice’s Touhou Hunger Games Simulator</span> is
-  a fan-created, non-profit work. The Terms of Use and Privacy Policy applies to
-  all of the BrantSteele simulators. Please contact Alice if you have any comments
+  a fan-created, non-profit work. Please contact Alice if you have any comments
   or concerns about copyright. Any adjustments necessary will be made to satisfy
   legal concerns. By simulating, you are agreeing to these terms.
 </p>

@@ -1,5 +1,25 @@
-<script>
+<script lang="ts">
   import "../app.css";
+  import { setContext } from "svelte";
+  import { writable } from "svelte/store";
+
+  const default_image = "placeholder.jpg"
+  const cache = writable<Array<{ name: string, picture: string }>>();
+  $: cache.set([
+    { name: "zent", picture: default_image },
+    { name: "dankmemez", picture: default_image },
+    { name: "alice", picture: default_image },
+    { name: "nickahmad", picture: default_image },
+    { name: "mikanyannyan", picture: default_image },
+    { name: "cikeci", picture: default_image },
+    { name: "miharioyama", picture: default_image },
+    { name: "frame", picture: default_image },
+    { name: "onnloong", picture: default_image },
+    { name: "yuki", picture: default_image },
+    { name: "thom", picture: default_image }
+  ]);
+
+  setContext("cache", cache);
 </script>
 
 <svelte:head>
