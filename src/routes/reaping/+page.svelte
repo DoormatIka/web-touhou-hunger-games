@@ -12,7 +12,20 @@
     { name: "onnloong", picture: default_image },
     { name: "yuki", picture: default_image },
     { name: "thom", picture: default_image }
-  ]
+  ];
+  
+  let imgurl: string | undefined;
+  let name: string | undefined;
+  function onAdd(e: SubmitEvent) {
+    if (imgurl && name) {
+      const formData = new FormData(e.target as HTMLFormElement);
+      const name = formData.get("name");
+      const imgu = formData.get("imgu");
+      console.log(name, imgu)
+      if (name && imgu)
+        players.push({ name: name.toString(), picture: imgu.toString() })
+    }
+  }
 </script>
 
 
@@ -26,4 +39,15 @@
       </div>
     {/each}
   </div>
+  <form on:submit|preventDefault={onAdd} class=" mt-10 flex flex-col justify-center items-center gap-3 sm:w-1/4 w-full">
+    <label>
+      Name
+      <input type="text" class=" h-10 w-full" name="name" required />
+    </label>
+    <label>
+      Image URL
+      <input type="text" class=" h-10 w-full" name="imgu" required />
+    </label>
+    <button type="submit" class="py-5 px-10 border">Add</button>
+  </form>
 </div>

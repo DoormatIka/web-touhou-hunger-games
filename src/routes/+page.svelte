@@ -24,3 +24,4 @@
 </a>
 
 <p class="mt-5">Using edge functions. Severely incomplete.</p>
+<p class="text-red-400"><b>Please enable JS as all of this is running in the browser.</b></p>
