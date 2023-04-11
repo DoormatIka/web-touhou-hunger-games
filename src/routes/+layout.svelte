@@ -1,11 +1,15 @@
 <script lang="ts">
+  import type { Area } from "$lib/core/area";
   import "../app.css";
   import { setContext } from "svelte";
   import { writable } from "svelte/store";
 
   const default_image = "placeholder.jpg"
-  const cache = writable<Array<{ name: string, picture: string }>>();
-  cache.set([
+  const players = writable<Array<{ name: string, picture: string }>>([]);
+  const graph = writable<Map<string, Area>>(new Map());
+  const event = writable(Array<string>);
+
+  players.set([
     { name: "zent", picture: default_image },
     { name: "dankmemez", picture: default_image },
     { name: "alice", picture: default_image },
@@ -19,7 +23,9 @@
     { name: "thom", picture: default_image }
   ]);
 
-  setContext("cache", cache);
+  setContext("players", players);
+  setContext("graph", graph);
+  setContext("event", event);
 </script>
 
 <svelte:head>

@@ -1,0 +1,4 @@
+[
+  "$player moves from $fromlocation to $tolocation.",
+  "$player walks to $tolocation from $fromlocation."
+]

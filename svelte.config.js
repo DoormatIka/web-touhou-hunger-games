@@ -20,7 +20,7 @@ const config = {
       directives: {
         "font-src": ["self", "https://fonts.gstatic.com"],
         "style-src": ["self", "https://fonts.googleapis.com", "unsafe-inline"],
-        "img-src": ["self", "media.discordapp.net"],
+        "img-src": ["*"],
         "default-src": ["self"],
       },
     }

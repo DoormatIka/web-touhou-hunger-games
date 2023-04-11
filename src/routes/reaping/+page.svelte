@@ -2,9 +2,17 @@
   import { fly } from "svelte/transition";
   import { flip } from "svelte/animate";
   import { getContext } from "svelte";
+
+  import { createGraph, type Area } from "$lib/core/area";
+  import human_village from "$lib/core/data/humanvillage.json";
+
   import type { Writable } from "svelte/store";
+
+
   let players: Writable<Array<{ name: string; picture: string }>> =
-    getContext("cache");
+    getContext("players");
+  let graphs: Writable<Map<string, Area>> = 
+    getContext("graph");
 
   function onAdd(e: SubmitEvent) {
     const formData = new FormData(e.target as HTMLFormElement);
@@ -31,12 +39,12 @@
   >
     {#each $players as { name, picture }, index (name)}
       <div
-        in:fly|local={{ y: -100, duration: 500 }}
-        out:fly|local={{ y: -100, duration: 500 }}
+        in:fly|local={{ x: -100, duration: 500 }}
+        out:fly|local={{ x: -100, duration: 500 }}
         animate:flip={{ duration: 600 }}
         class="border px-3 break-all relative m-auto"
       >
-        <img src={picture} alt={name} class=" max-h-32 object-contain" />
+        <img src={picture} alt={name} class=" my-3 max-h-32 object-contain" />
         <p>{name}</p>
         <button
           on:click={() => {
@@ -45,6 +53,15 @@
         >
       </div>
     {/each}
+  </div>
+  <div>
+    <a 
+      href="/play"
+      class=" mt-10 inline-block px-32 py-3 border shadow-none hover:shadow-lg transition-all duration-300 ease-out hover:tracking-widest"
+      on:click={() => { graphs.set(createGraph(human_village)) }}
+    >
+      Play
+    </a>
   </div>
   <div class=" mt-10 flex flex-col justify-center items-center w-full">
     <form
