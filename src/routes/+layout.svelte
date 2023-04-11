@@ -5,7 +5,7 @@
 
   const default_image = "placeholder.jpg"
   const cache = writable<Array<{ name: string, picture: string }>>();
-  $: cache.set([
+  cache.set([
     { name: "zent", picture: default_image },
     { name: "dankmemez", picture: default_image },
     { name: "alice", picture: default_image },
@@ -30,7 +30,7 @@
 
 <div class="h-screen flex-grow w-screen flex sm:flex-row flex-col overflow-hidden">
   <div
-    class="relative menu-bg min-h-fit w-full sm:h-full sm:w-1/4 min-w-min sm:max-w-xs border"
+    class="menu-bg min-h-fit w-full sm:h-full sm:w-1/4 min-w-min sm:max-w-xs border"
   >
     <div class="text-center py-7 px-4">
       <h3>Touhou Hunger Games</h3>
@@ -46,7 +46,7 @@
     <div
       class="flex justify-center items-center mx-10 my-6 text-center leading-loose flex-col"
     >
-    <slot />
-  </div>
+      <slot />
+    </div>  
   </div>
 </div>
