@@ -35,6 +35,14 @@ button {
   @apply text-cyan-400/90 hover:underline font-rubik self-center;
 }
 
+li {
+  @apply list-disc list-inside
+}
+
+strike {
+  @apply text-gray-400/60
+}
+
 .menu-bg {
   background: linear-gradient(
     0deg, 

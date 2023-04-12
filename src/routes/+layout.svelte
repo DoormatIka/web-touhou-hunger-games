@@ -42,9 +42,7 @@
       <h3>Touhou Hunger Games</h3>
       <div class="flex sm:flex-col flex-row gap-5 sm:gap-2 sm:mt-14 mt-10 mx-3 text-white justify-center">
         <a href="/" class="sm:mb-5">Disclaimer</a>
-        <a href="/">Options</a>
-        <a href="/">Help</a>
-        <a href="/">Modify Events</a>
+        <a href="/todo">Todo List</a>
       </div>
     </div>
   </div>
