@@ -1,11 +1,16 @@
+<svelte:head>
+  <title>2huG - To Do List</title>
+  <meta content="The Roadmap for Touhou Hunger Games" property="og:description" />
+</svelte:head>
+
 <h3 class="text-yellow-100">Beta Release</h3>
 <ul>
+  <li>Barrier Shrinking to facilitate speed of matches.</li>
   <li><strike>Player movement</strike></li>
   <li><strike>Fighting Players</strike></li>
   <li><strike>Human Village Location</strike></li>
   <li><strike>Random Deaths</strike></li>
   <li><strike>Random Events</strike></li>
-  <li>Barrier Shrinking to facilitate speed of matches.</li>
 </ul>
 
 <h3 class="mt-10">Alpha 1 Release</h3>
