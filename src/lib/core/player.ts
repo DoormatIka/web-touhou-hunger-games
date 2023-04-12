@@ -12,6 +12,7 @@ export class Player {
 
   constructor(
     public id: string, 
+    public imageLink: string,
     private fighting_chance_limit: number = 100,
     private move_chance_half: number = 50,
     private random_death_chance_half: number = 50,
@@ -76,12 +77,12 @@ export function actionPicker() {
  * 
  */
 export function createPlayers(
-  players_config: string[],
+  players_config: { name: string, picture: string }[],
   currentArea: string
 ) {
   const players = []
   for (const player_name of players_config) {
-    const player = new Player(player_name, 1000, 15, 10);
+    const player = new Player(player_name.name, player_name.picture, 1000, 15, 10);
     // console.log(player.toString())
     player.currentArea = currentArea;
     players.push(player);

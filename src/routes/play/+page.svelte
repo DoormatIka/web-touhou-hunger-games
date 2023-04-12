@@ -2,9 +2,10 @@
   import type { Writable } from "svelte/store";
   import { getContext } from "svelte";
   import { getPlayersLength, type Area, type createGraph, getLastPlayer } from "$lib/core/area";
-  import { onProceed } from "$lib/core/continue";
+  import { onProceed, type Message } from "$lib/core/continue";
   import { Player, createPlayers } from "$lib/core/player";
-    import { redirect } from "@sveltejs/kit";
+  import { redirect } from "@sveltejs/kit";
+  import Move from "./move.svelte";
 
   let players: Writable<Array<{ name: string; picture: string }>> =
     getContext("players");
@@ -18,16 +19,14 @@
   if (getPlayersLength($graphs) === 0) {
     $graphs.get("Dragon Road")
         ?.players.push(
-          ...createPlayers(
-            $players.map(v => v.name), "Dragon Road"
-          ))
+          ...createPlayers($players, "Dragon Road"))
   }
 
   let results: {
-    onMovement: string[],
-    onStay: string[],
-    onKill: string[],
-    onRandomDeath: string[],
+    onMovement: Message[],
+    onStay: Message[],
+    onKill: Message[],
+    onRandomDeath: Message[],
     rounds: number
   } = { onMovement: [], onStay: [], onRandomDeath: [], onKill: [], rounds: 1 }
 </script>
@@ -38,17 +37,17 @@
   <p class="text-red-500">Graphs not set.</p>
 {:else}
   {#if results}
-    {#each results.onMovement as moved}
-      <p>{moved}</p>
+    {#each results.onMovement as { message, pictures }}
+      <Move move={ message } def={ pictures.unmarked } dead={ pictures.marked } color="white"></Move>
     {/each}
-    {#each results.onKill as kill}
-      <p class="text-red-500">{kill}</p>
+    {#each results.onKill as { message, pictures }}
+      <Move move={ message } def={ pictures.unmarked } dead={ pictures.marked } color="red"></Move>
     {/each}
-    {#each results.onRandomDeath as death}
-      <p class="text-red-300">{death}</p>
+    {#each results.onRandomDeath as { message, pictures }}
+      <Move move={ message } def={ pictures.unmarked } dead={ pictures.marked } color="grey"></Move>
     {/each}
-    {#each results.onStay as stay}
-      <p class="text-blue-400">{stay}</p>
+    {#each results.onStay as { message, pictures }}
+      <Move move={ message } def={ pictures.unmarked } dead={ pictures.marked } color="sky"></Move>
     {/each}
     <p>Round: {results.rounds}</p>
   {/if}
@@ -56,5 +55,5 @@
   {#if getPlayersLength($graphs) === 1}
     <p class="text-yellow-300">Winner: { getLastPlayer($graphs)?.id }</p>
   {/if}
-    <button on:click={() => { results = onProceed($graphs, results.rounds); graphs = graphs; }}>Continue</button>
+  <button on:click={() => { results = onProceed($graphs, results.rounds); graphs = graphs; }}>Continue</button>
 {/if}
