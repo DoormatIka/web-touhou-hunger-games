@@ -37,7 +37,7 @@ export function onProceed(
   })
   rounds++;
   // Object.freeze()
-  console.log(adj_list)
+  // console.log(adj_list)
   return {
     onMovement,
     onStay,

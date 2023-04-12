@@ -24,7 +24,6 @@ export function vsPlayers(
 
     prev.generateFightingChance()
     curr.generateFightingChance()
-    console.log(`prev: ${prev.getFightingChance()} | curr: ${curr.getFightingChance()}`)
     prev.foughtWith = curr.id;
     curr.foughtWith = prev.id;
 
