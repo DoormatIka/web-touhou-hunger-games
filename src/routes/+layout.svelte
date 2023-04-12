@@ -41,8 +41,10 @@
     <div class="text-center py-7 px-4">
       <h3>Touhou Hunger Games</h3>
       <div class="flex sm:flex-col flex-row gap-5 sm:gap-2 sm:mt-14 mt-10 mx-3 text-white justify-center">
-        <a href="/" class="sm:mb-5">Disclaimer</a>
-        <a href="/todo">Todo List</a>
+        <a href="/">Disclaimer</a>
+        <a href="/todo" class="sm:mt-5">Todo List</a>
+        <a href="https://github.com/DoormatIka/touhou-hunger-games">Github Project</a>
+        <a href="https://github.com/DoormatIka">Github Profile</a>
       </div>
     </div>
   </div>
