@@ -43,6 +43,10 @@ strike {
   @apply text-gray-400/60
 }
 
+br {
+  @apply my-3
+}
+
 .menu-bg {
   background: linear-gradient(
     0deg, 
