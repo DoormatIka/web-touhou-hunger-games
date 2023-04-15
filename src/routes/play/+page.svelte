@@ -13,7 +13,7 @@
     getContext("graph");
   
   if ($players.length === 0 || $graphs.size === 0) {
-    throw redirect(301, "/")
+    throw redirect(300, "/reaping")
   }
 
   if (getPlayersLength($graphs) === 0) {
@@ -27,18 +27,23 @@
     onStay: Message[],
     onKill: Message[],
     onRandomDeath: Message[],
-    rounds: number
-  } = { onMovement: [], onStay: [], onRandomDeath: [], onKill: [], rounds: 1 }
+    onBarrier: Message[],
+    rounds: number,
+    gap: number
+  } = { onMovement: [], onStay: [], onRandomDeath: [], onKill: [], onBarrier: [], rounds: 1, gap: 20 }
 </script>
 
 {#if $players.length < 1}
   <p class="text-red-500">Players not set.</p>
-{:else if $graphs.size < 1}
+{:else if !$graphs}
   <p class="text-red-500">Graphs not set.</p>
 {:else}
   {#if results}
     {#each results.onMovement as { message, pictures }}
       <Move move={ message } def={ pictures.unmarked } dead={ pictures.marked } color="white"></Move>
+    {/each}
+    {#each results.onBarrier as { message, pictures }}
+      <Move move={ message } def={ pictures.unmarked } dead={ pictures.marked } color="blue"></Move>
     {/each}
     {#each results.onKill as { message, pictures }}
       <Move move={ message } def={ pictures.unmarked } dead={ pictures.marked } color="red"></Move>
@@ -50,10 +55,18 @@
       <Move move={ message } def={ pictures.unmarked } dead={ pictures.marked } color="sky"></Move>
     {/each}
     <p>Round: {results.rounds}</p>
+    <p>Barrier level: {results.gap}</p>
   {/if}
 
   {#if getPlayersLength($graphs) === 1}
     <p class="text-yellow-300">Winner: { getLastPlayer($graphs)?.id }</p>
   {/if}
-  <button on:click={() => { results = onProceed($graphs, results.rounds); graphs = graphs; }}>Continue</button>
+  <button on:click={() => {
+    results = onProceed($graphs, results.rounds, results.gap);
+    results.rounds++;
+    if (results.gap > 1) {
+      results.gap--;
+    }
+    graphs = graphs; 
+  }}>Continue</button>
 {/if}

@@ -3,7 +3,7 @@
   import { flip } from "svelte/animate";
   import { getContext } from "svelte";
 
-  import { createGraph, type Area } from "$lib/core/area";
+  import { createGraph, type Area, labelDistances } from "$lib/core/area";
   import human_village from "$lib/core/data/humanvillage.json";
 
   import type { Writable } from "svelte/store";
@@ -28,6 +28,12 @@
     formData.set("name", "");
     formData.set("imgu", "");
     $players = $players; // update code
+  }
+
+  function createLabelledGraph() {
+    const graph = createGraph(human_village)
+    labelDistances("Dragon Road", graph) 
+    graphs.set(graph);
   }
 </script>
 
@@ -58,7 +64,7 @@
     <a 
       href="/play"
       class=" mt-10 inline-block px-32 py-3 border shadow-none hover:shadow-lg transition-all duration-300 ease-out hover:tracking-widest"
-      on:click={() => { graphs.set(createGraph(human_village)) }}
+      on:click={createLabelledGraph}
     >
       Play
     </a>

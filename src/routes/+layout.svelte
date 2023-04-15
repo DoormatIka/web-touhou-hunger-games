@@ -7,7 +7,7 @@
   const default_image = "placeholder.jpg"
   const players = writable<Array<{ name: string, picture: string }>>([]);
   const graph = writable<Map<string, Area>>(new Map());
-  const event = writable(Array<string>);
+  const event = writable<Array<string>>([]);
 
   players.set([
     { name: "zent", picture: default_image },

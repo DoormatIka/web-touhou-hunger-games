@@ -2,7 +2,7 @@
   export let move: string;
   export let dead: string | undefined;
   export let def: string | undefined;
-  export let color: "red" | "grey" | "white" | "sky";
+  export let color: "red" | "grey" | "white" | "sky" | "blue";
 </script>
 
   <div class="border m-3 sm:w-3/5 sm:min-w-min w-full">
@@ -23,6 +23,8 @@
         <p class="text-gray-300">{move}</p>
       {:else if color === "sky"}
         <p class="text-sky-300">{move}</p>
+      {:else if color === "blue"}
+        <p class="text-blue-500">{move}</p>
       {/if}
     </div>
   </div>

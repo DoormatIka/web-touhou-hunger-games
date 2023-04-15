@@ -12,11 +12,13 @@ export type Message = {
 export function onProceed(
   adj_list: Map<string, Area>, 
   rounds: number,
+  gap: number
 ) {
   const onMovement: Message[] = [];
   const onStay: Message[] = [];
   const onKill: Message[] = [];
   const onRandomDeath: Message[] = [];
+  const onBarrier: Message[] = [];
 
   shallowTraverseGraph(adj_list, (area, current) => {
     arrayMoveTo(area, adj_list, // random messages
@@ -31,8 +33,13 @@ export function onProceed(
           message: chooseStay(player.id, current), 
           pictures: { unmarked: player.imageLink, marked: undefined } 
         }) 
-      }
-    );
+      },
+      (player, moved_to) => {
+        onBarrier.push({
+          message: `${player.id} barriered ${moved_to}.`,
+          pictures: { unmarked: player.imageLink, marked: undefined }
+        })
+      }, gap);
   })
 
   shallowTraverseGraph(adj_list, (area, curr) => {
@@ -60,13 +67,14 @@ export function onProceed(
       sweepPlayer(area, i);
     }
   })
-  rounds++;
 
   return {
     onMovement,
     onStay,
     onKill,
     onRandomDeath,
-    rounds
+    onBarrier,
+    rounds,
+    gap
   }
 }
